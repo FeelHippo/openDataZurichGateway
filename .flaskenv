@@ -1,6 +1,11 @@
-FLASK_APP = app
-FLASK_DEBUG = True
-FLASK_RUN_HOST = "127.0.0.1"
-FLASK_RUN_PORT = 8080
-SERVER_NAME = "localhost"
-SECRET_KEY = "6DzI8n4E3ptGw3fNPiynLLNxb7UNn8bH"
+FLASK_APP=app
+FLASK_DEBUG=True
+FLASK_RUN_HOST=127.0.0.1
+FLASK_RUN_PORT=8080
+SERVER_NAME=localhost
+BASE_URL=https://www.ogd.stadt-zuerich.ch/wfs/geoportal/
+ZUERI_VELO=Standorte_ZueriVelo
+SERVICE=WFS
+REQUEST=GETFEATURE
+VERSION=1.3.0
+TYPENAME=view_zuerivelo_publibike
