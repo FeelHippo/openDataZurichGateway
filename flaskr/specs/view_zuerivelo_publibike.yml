@@ -1,26 +1,38 @@
 tags:
-  - Fetch ZüriVelo locations
+  - Fetch ZueriVelo locations
 responses:
   '200':
     description: OK
-    schema:
-      type: array
-      items:
-        $ref: '#/definitions/GetZüriVelo'
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/ZueriVelo'
+    components:
+      schemas:
+        ZueriVelo:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              lat:
+                type: number
+              lng:
+                type: number
+              name:
+                type: string
+              address:
+                type: string
+              zip:
+                type: string
+              city:
+                type: string
+              is_active:
+                type: boolean
   '400':
     description: Bad Request
-  '401':
-    description: Unauthorized
   '422':
     description: Unprocessable Entity
   '500':
     description: Server Error
-definitions:
-  GetZüriVelo:
-    type: object
-    properties:
-      result:
-        type: array
-        items:
-          type: string
-    title: Get ZüriVelo response
