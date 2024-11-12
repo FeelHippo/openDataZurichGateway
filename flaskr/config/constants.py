@@ -16,7 +16,7 @@ status = 'qgs:status'
 
 # The below can be moved to AWS SecretsManager
 distribution_domain_name = 'https://d1nc1ivlourdkp.cloudfront.net'
-velo_jpg = 'velo.jpg'
+velo_icon = 'velo.png'
 
 def velo_jpg_url() -> str:
-  return distribution_domain_name + '/' + velo_jpg
+  return distribution_domain_name + '/' + velo_icon
