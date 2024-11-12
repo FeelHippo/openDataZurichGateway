@@ -13,3 +13,10 @@ zip = 'qgs:plz'
 city = 'qgs:stadt'
 active = 'Aktiv'
 status = 'qgs:status'
+
+# The below can be moved to AWS SecretsManager
+distribution_domain_name = 'https://d1nc1ivlourdkp.cloudfront.net'
+velo_jpg = 'velo.jpg'
+
+def velo_jpg_url() -> str:
+  return distribution_domain_name + '/' + velo_jpg

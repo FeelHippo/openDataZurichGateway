@@ -53,4 +53,5 @@ def format_zuerivelo_publibike(data):
         'zip': view[constants.zip],
         'city': view[constants.city],
         'is_active': view[constants.status] == constants.active,
+        'icon_url': constants.velo_jpg_url(),
     }
