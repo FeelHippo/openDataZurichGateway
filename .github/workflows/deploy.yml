@@ -38,6 +38,6 @@ jobs:
               pip install flasgger &&
               pip install xmltodict &&
               ls -a &&
-              cd /flaskr &&
+              cd ../flaskr &&
               pm2 start __init__.py --name zurich-geoportal-gateway
               '
