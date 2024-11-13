@@ -1,0 +1,39 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2 
+      - name: Clone & Deploy
+        env:
+            PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            HOSTNAME: ${{secrets.SSH_HOST}}
+            USER_NAME: ${{secrets.USER_NAME}}
+      
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+
+              # Start deployment.
+              cd /home/ubuntu/var/www/stadtplan-mobile-gateway &&
+              deactivate venv &&
+              git fetch --all &&
+              git reset --hard origin/main &&
+              git pull origin main &&
+              source venv/bin/activate &&
+              pip install Flask &&
+              pip install python-dotenv &&
+              pip install flasgger &&
+              pip install dotenv &&
+              pip install xmltodict &&
+              sudo pm2 stop ./flaskr/__init__.py &&
+              sudo pm2 start ./flaskr/__init__.py --name zurich-geoportal-gateway --interpreter=python3
+              '
