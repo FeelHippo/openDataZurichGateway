@@ -29,8 +29,8 @@ jobs:
               sudo chmod -R 777 openDataZurichGateway &&
               cd openDataZurichGateway &&
               python3 -m venv venv &&
-              python -V &&
               source venv/bin/activate &&
+              python -V &&
               pip install --upgrade pip setuptools wheel &&
               pip install Flask &&
               pip install python-dotenv &&
