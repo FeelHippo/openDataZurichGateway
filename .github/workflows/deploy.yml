@@ -33,7 +33,7 @@ jobs:
               python -V &&
               pip install --upgrade pip setuptools wheel &&
               pip install Flask &&
-              pip install python-dotenv &&
+              pip install dotenv &&
               pip install flasgger &&
               pip install dotenv &&
               pip install xmltodict &&
