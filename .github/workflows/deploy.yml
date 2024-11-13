@@ -26,7 +26,7 @@ jobs:
               cd /var/www &&
               rm -rf openDataZurichGateway &&
               sudo git clone https://github.com/FeelHippo/openDataZurichGateway.git &&
-              sudo chmod -R 777 stadtplan-mobile-gateway/ &&
+              sudo chmod -R 777 openDataZurichGateway &&
               cd openDataZurichGateway &&
               python3 -m venv venv &&
               source venv/bin/activate &&
