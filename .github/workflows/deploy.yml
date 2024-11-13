@@ -30,6 +30,7 @@ jobs:
               cd openDataZurichGateway &&
               python3 -m venv venv &&
               source venv/bin/activate &&
+              pip install --upgrade pip setuptools wheel &&
               pip install Flask &&
               pip install --upgrade python-dotenv &&
               pip install flasgger &&
