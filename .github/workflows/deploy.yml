@@ -36,6 +36,6 @@ jobs:
               pip install python-dotenv &&
               pip install flasgger &&
               pip install xmltodict &&
-              sudo pm2 stop ./flaskr/__init__.py &&
-              sudo pm2 start ./flaskr/__init__.py --name zurich-geoportal-gateway --interpreter=python3
+              sudo pm2 stop /flaskr/__init__.py &&
+              sudo pm2 start /flaskr/__init__.py --name zurich-geoportal-gateway --interpreter=python3
               '
