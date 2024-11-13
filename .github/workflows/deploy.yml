@@ -24,7 +24,7 @@ jobs:
 
               # Start deployment.
               cd /var/www &&
-              rm -rf openDataZurichGateway &&
+              sudo rm -rf openDataZurichGateway &&
               sudo git clone https://github.com/FeelHippo/openDataZurichGateway.git &&
               sudo chmod -R 777 openDataZurichGateway &&
               cd openDataZurichGateway &&
