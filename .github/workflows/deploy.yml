@@ -23,7 +23,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
               # Start deployment.
-              cd /home/ubuntu/var/www/stadtplan-mobile-gateway &&
+              cd /var/www/stadtplan-mobile-gateway &&
               deactivate venv &&
               git fetch --all &&
               git reset --hard origin/main &&
