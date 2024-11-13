@@ -23,10 +23,12 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
               # Start deployment.
-              cd /var/www/stadtplan-mobile-gateway &&
-              git fetch --all &&
-              git reset --hard origin/main &&
-              git pull origin main &&
+              cd /var/www &&
+              rm -rf openDataZurichGateway &&
+              git clone https://github.com/FeelHippo/openDataZurichGateway.git &&
+              sudo chmod -R 777 stadtplan-mobile-gateway/ &&
+              cd openDataZurichGateway &&
+              python3 -m venv venv &&
               source venv/bin/activate &&
               pip install Flask &&
               pip install python-dotenv &&
