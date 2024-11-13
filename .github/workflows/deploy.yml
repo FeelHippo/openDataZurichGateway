@@ -33,8 +33,8 @@ jobs:
               python -V &&
               pip install --upgrade pip setuptools wheel &&
               pip install Flask &&
+              pip install python-dotenv &&
               pip install flasgger &&
-              pip install dotenv &&
               pip install xmltodict &&
               sudo pm2 stop ./flaskr/__init__.py &&
               sudo pm2 start ./flaskr/__init__.py --name zurich-geoportal-gateway --interpreter=python3
