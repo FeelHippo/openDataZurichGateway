@@ -24,7 +24,6 @@ jobs:
 
               # Start deployment.
               cd /var/www/stadtplan-mobile-gateway &&
-              deactivate venv &&
               git fetch --all &&
               git reset --hard origin/main &&
               git pull origin main &&
