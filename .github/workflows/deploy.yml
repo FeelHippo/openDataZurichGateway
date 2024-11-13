@@ -37,7 +37,5 @@ jobs:
               pip install python-dotenv &&
               pip install flasgger &&
               pip install xmltodict &&
-              ls -a &&
-              cd ../flaskr &&
-              pm2 start __init__.py --name zurich-geoportal-gateway
+              pm2 start flaskr/__init__.py --name zurich-geoportal-gateway
               '
