@@ -24,7 +24,7 @@ def create_app():
 
     # Task health evaluation
     # https://aws.amazon.com/blogs/containers/a-deep-dive-into-amazon-ecs-task-health-and-task-replacement/
-    app.add_url_rule('/health', health.ping)
+    api.add_resource(health.Ping, '/health')
 
     api.add_resource(zuerivelo.ZueriVelo, '/view-zuerivelo-publibike')
     
