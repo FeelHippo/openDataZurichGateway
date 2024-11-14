@@ -1,12 +1,16 @@
+import os
+import sys
 from flask import Flask
 from flask_restful import Api
 from flasgger import Swagger
 from logging.config import dictConfig
 from dotenv import load_dotenv
-from .config import dependencies
-from .routes import health, zuerivelo
-import sys
-import os
+
+# For relative imports to work in Python 3.6
+import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
+from config import dependencies
+from routes import health, zuerivelo
 
 def create_app():
     

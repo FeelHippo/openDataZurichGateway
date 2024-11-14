@@ -1,11 +1,14 @@
+import os
+import sys
+import logging
+import urllib.request
+import collections.abc
+import xmltodict, json
 from flask import Flask, jsonify, make_response
 from flask_restful import Resource
 from flasgger import swag_from
-from ..config import constants
-import collections.abc
-import xmltodict, json
-import urllib.request
-import logging
+
+from config import constants
 
 try:
     collectionsAbc = collections.abc
