@@ -91,13 +91,16 @@ Some useful resources:
 - [Deploying Flask App With PM2 on Ubuntu Server 18.04](https://gokhang1327.medium.com/deploying-flask-app-with-pm2-on-ubuntu-server-18-04-992dfd808079)
 - [create venv without sudo to be able to work (esp. write) in it without sudo](https://stackoverflow.com/a/19472082). This is taken care of by the [github workflow](https://github.com/FeelHippo/openDataZurichGateway/blob/main/.github/workflows/deploy.yml)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CI CD -->
+### CI CD
 [See github workflow for details](https://github.com/FeelHippo/openDataZurichGateway/blob/main/.github/workflows/deploy.yml)
 
 <!-- S3 -->
+### S3
 [App assets are stored in an S3 bucket](https://eu-north-1.console.aws.amazon.com/s3/buckets/stadtplan-mobile-app?region=eu-north-1&bucketType=general&tab=objects)
 
 <!-- CDN -->
+### CDN
 [Cached copy of files from S3 are served to the app through Cloud Front](https://us-east-1.console.aws.amazon.com/cloudfront/v4/home?region=eu-north-1#/distributions/E346HDBF627ISG/behaviors) 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
