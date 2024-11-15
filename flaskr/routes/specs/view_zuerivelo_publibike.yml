@@ -1,0 +1,37 @@
+tags:
+  - Fetch ZueriVelo locations
+responses:
+  '200':
+    description: OK
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/ZueriVelo'
+  '400':
+    description: Bad Request
+  '422':
+    description: Unprocessable Entity
+  '500':
+    description: Server Error
+definitions:
+  ZueriVelo:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        lat:
+          type: number
+        lng:
+          type: number
+        name:
+          type: string
+        address:
+          type: string
+        zip:
+          type: string
+        city:
+          type: string
+        is_active:
+          type: boolean
