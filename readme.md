@@ -68,7 +68,7 @@ https://flask.palletsprojects.com/en/1.1.x/tutorial/layout/
 
 <!-- API DOCS -->
 ### Docs
-http://127.0.0.1:8080/apidocs/
+[Swagger Documentation](http://ec2-16-170-122-157.eu-north-1.compute.amazonaws.com/apidocs/)
 
 <!-- TEST -->
 ### Test application // WIP
